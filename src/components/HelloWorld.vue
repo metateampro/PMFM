@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <v-layout
+    <!-- <v-layout
       text-center
       wrap
     >
@@ -80,7 +80,7 @@
           </a>
         </v-layout>
       </v-flex>
-    </v-layout>
+    </v-layout> -->
   </v-container>
 </template>
 
