@@ -7,25 +7,26 @@
     >
     <v-toolbar-title
         style="width: 300px"
-        class="ml-0 pl-4"
+        class="ml-0"
     >
         <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
-        <span class="hidden-sm-and-down">Google Contacts</span>
+        <span class="hidden-sm-and-down">pmp-m</span>
     </v-toolbar-title>
+    <v-spacer></v-spacer>
     <v-text-field
         flat
         solo-inverted
         hide-details
-        prepend-inner-icon="mdi-search"
+        prepend-inner-icon="mdi-magnify"
         label="Search"
         class="hidden-sm-and-down"
     ></v-text-field>
-    <v-spacer></v-spacer>
+    
     <v-btn icon>
-        <v-icon>apps</v-icon>
+        <v-icon>mdi-apps</v-icon>
     </v-btn>
     <v-btn icon>
-        <v-icon>notifications</v-icon>
+        <v-icon>mdi-bell</v-icon>
     </v-btn>
     <v-btn
         icon
@@ -52,37 +53,7 @@
     data: () => ({
       dialog: false,
       drawer: null,
-      items: [
-        { icon: 'mdi-contacts', text: 'Contacts' },
-        { icon: 'mdi-history', text: 'Frequently contacted' },
-        { icon: 'mdi-content_copy', text: 'Duplicates' },
-        {
-          icon: 'chevron-down',
-          'icon-alt': 'chevron-down',
-          text: 'Labels',
-          model: true,
-          children: [
-            { icon: 'plus', text: 'Create label' },
-          ],
-        },
-        {                                                                                                                                                                                 
-          icon: 'mdi-chevron-down',
-          'icon-alt': 'mdi-chevron-down',
-          text: 'More',
-          model: false,
-          children: [
-            { text: 'Import' },
-            { text: 'Export' },
-            { text: 'Print' },
-            { text: 'Undo changes' },
-            { text: 'Other contacts' },
-          ],
-        },
-        { icon: 'mdi-settings-outline', text: 'Settings' },
-        { icon: 'mdi-chat_bubble', text: 'Send feedback' },
-        { icon: 'mdi-help', text: 'Help' },
-        { icon: 'mdi-phonelink', text: 'App downloads' },
-        { icon: 'mdi-keyboard', text: 'Go to the old version' },
+      items: [ 
       ],
     }),
   }

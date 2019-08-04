@@ -6,7 +6,9 @@
 
 
     <!-- Sizes your content based upon application components -->
-    <v-content>
+    <v-content
+       fluid
+       fill-height>
 
       <!-- Provides the application the proper gutter -->
       <v-container fluid>
