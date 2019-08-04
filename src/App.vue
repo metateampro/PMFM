@@ -1,12 +1,11 @@
 <template>
   <v-app>
     <v-navigation-drawer app>
-      <!-- -->
+      <LeftBarMenu />
     </v-navigation-drawer>
 
-    <v-app-bar app>
-      <!-- -->
-    </v-app-bar>
+      <AppBar />
+
 
     <!-- Sizes your content based upon application components -->
     <v-content>
@@ -30,6 +29,8 @@ import Vue from 'vue';
 import HelloWorld from './components/HelloWorld.vue';
 import LeftBarMenu from './components/LeftBarMenu.vue';
 import Authorization from './components/Authorization.vue';
+import AppBar from './components/AppBar.vue';
+
 
 export default Vue.extend({
   name: 'App',
@@ -37,6 +38,7 @@ export default Vue.extend({
     HelloWorld,
     LeftBarMenu,
     Authorization,
+    AppBar,
   },
   data: () => ({
     //

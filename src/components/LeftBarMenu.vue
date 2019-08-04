@@ -76,7 +76,7 @@
       </v-list>
     </v-navigation-drawer>
 
-    <v-app-bar
+    <!-- <v-app-bar
       :clipped-left="$vuetify.breakpoint.lgAndUp"
       app
       color="blue darken-3"
@@ -118,8 +118,8 @@
           >
           </v-img></v-avatar>
       </v-btn>
-    </v-app-bar>
-    <v-content>
+    </v-app-bar> -->
+    <!-- <v-content>
       <v-container
         fluid
         fill-height
@@ -158,8 +158,8 @@
           </v-tooltip>
         </v-layout>
       </v-container>
-    </v-content>
-    <v-btn
+    </v-content> -->
+    <!-- <v-btn
       bottom
       color="pink"
       dark
@@ -169,8 +169,8 @@
       @click="dialog = !dialog"
     >
       <v-icon>mdi-plus</v-icon>
-    </v-btn>
-    <v-dialog
+    </v-btn> -->
+    <!-- <v-dialog
       v-model="dialog"
       width="800px"
     >
@@ -251,7 +251,7 @@
           >Save</v-btn>
         </v-card-actions>
       </v-card>
-    </v-dialog>
+    </v-dialog> -->
   </v-app>
 </template>
 
@@ -276,7 +276,7 @@
             { icon: 'plus', text: 'Create label' },
           ],
         },
-        {
+        {                                                                                                                                                                                 
           icon: 'mdi-chevron-down',
           'icon-alt': 'mdi-chevron-down',
           text: 'More',
