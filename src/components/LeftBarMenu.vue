@@ -17,10 +17,7 @@
             <v-flex
               xs6
               class="text-center">
-              <a
-                href="#!"
-                class="body-2 black--text"
-              >EDIT</a>
+              <a href="#!" class="body-2 black--text">EDIT</a>
             </v-flex>
           </v-layout>
           <v-list-group
@@ -28,8 +25,7 @@
             :key="item.text"
             v-model="item.model"
             :prepend-icon="item.model ? item.icon : item['icon-alt']"
-            append-icon=""
-          >
+            append-icon="">
             <template v-slot:activator>
               <v-list-item>
                 <v-list-item-content>
@@ -56,15 +52,15 @@
           <v-list-item
             v-else
             :key="item.text"
-            @click="">
-            <v-list-item-action>
-              <v-icon>{{ item.icon }}</v-icon>
-            </v-list-item-action>
-            <v-list-item-content>
-              <v-list-item-title>
-                {{ item.text }}
-              </v-list-item-title>
-            </v-list-item-content>
+            :to="item.routerLink || '*'">
+              <v-list-item-action>
+                <v-icon>{{ item.icon }}</v-icon>
+              </v-list-item-action>
+              <v-list-item-content >
+                <v-list-item-title>
+                  {{ item.text }}
+                </v-list-item-title>
+              </v-list-item-content>
           </v-list-item>
         </template>
       </v-list>
@@ -80,36 +76,22 @@
       dialog: false,
       drawer: null,
       items: [
-        { icon: 'mdi-contacts', text: 'Contacts' },
-        { icon: 'mdi-history', text: 'Frequently contacted' },
-        { icon: 'mdi-content_copy', text: 'Duplicates' },
+        { icon: 'mdi-view-comfy', text: 'Информационная панель', routerLink: '/'},
         {
-          icon: 'chevron-down',
-          'icon-alt': 'chevron-down',
-          text: 'Labels',
+          icon: 'mdi-chevron-up', 'icon-alt': 'mdi-chevron-down',
+          text: 'Реестры',
           model: true,
           children: [
-            { icon: 'plus', text: 'Create label' },
+            { text: 'Портфели' },
+            { text: 'Комплексные проекты' },
+            { text: 'Проекты' },
+            { text: 'Контракты' },
           ],
         },
-        {                                                                                                                                                                                 
-          icon: 'mdi-chevron-down',
-          'icon-alt': 'mdi-chevron-down',
-          text: 'More',
-          model: false,
-          children: [
-            { text: 'Import' },
-            { text: 'Export' },
-            { text: 'Print' },
-            { text: 'Undo changes' },
-            { text: 'Other contacts' },
-          ],
-        },
-        { icon: 'mdi-settings-outline', text: 'Settings' },
-        { icon: 'mdi-chat_bubble', text: 'Send feedback' },
-        { icon: 'mdi-help', text: 'Help' },
-        { icon: 'mdi-phonelink', text: 'App downloads' },
-        { icon: 'mdi-keyboard', text: 'Go to the old version' },
+        { icon: 'mdi-clock-outline', text: 'Совещания' },
+        { icon: 'mdi-calendar-star', text: 'Поручения' },
+        { icon: 'mdi-message-reply-text', text: 'Открытые вопросы' },
+        { icon: 'mdi-help', text: 'Техподдержка', routerLink: '/about' },
       ],
     }),
   }
