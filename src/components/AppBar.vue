@@ -9,7 +9,7 @@
         style="width: 300px"
         class="ml-0"
     >
-        <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
+        <v-app-bar-nav-icon @click="toggleSideBar"></v-app-bar-nav-icon>
         <span class="hidden-sm-and-down">pmp-m</span>
     </v-toolbar-title>
     <v-spacer></v-spacer>
@@ -48,7 +48,12 @@
 <script>
   export default {
     props: {
-      source: String,
+        source: String,
+    },
+    methods:{
+        toggleSideBar(){
+            this.$store.commit('toggleSideBar');
+        }
     },
     data: () => ({
       dialog: false,

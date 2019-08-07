@@ -38,7 +38,7 @@
             <v-list-item
               v-for="(child, i) in item.children"
               :key="i"
-              @click="">
+              >
               <v-list-item-action v-if="child.icon">
                 <v-icon>{{ child.icon }}</v-icon>
               </v-list-item-action>
@@ -68,9 +68,18 @@
 </template>
 
 <script>
+import AppBar from './AppBar.vue'
   export default {
     props: {
       source: String,
+    },
+    components:{
+            'side-bar': AppBar
+    },
+    computed:{
+        showSideBar(){
+            this.$store.getters.g_sideBarOpen;
+        }
     },
     data: () => ({
       dialog: false,
