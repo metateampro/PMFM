@@ -26,7 +26,6 @@
 
 <script lang="ts">
 import Vue from 'vue';
-import HelloWorld from './components/HelloWorld.vue';
 import LeftBarMenu from './components/LeftBarMenu.vue';
 import Authorization from './components/Authorization.vue';
 import AppBar from './components/AppBar.vue';
@@ -35,7 +34,6 @@ import AppBar from './components/AppBar.vue';
 export default Vue.extend({
   name: 'App',
   components: {
-    HelloWorld,
     LeftBarMenu,
     Authorization,
     AppBar,

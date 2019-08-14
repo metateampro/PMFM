@@ -1,6 +1,6 @@
 <template>
     <v-navigation-drawer
-      v-model="drawer"
+      v-model="showSideBar"
       :clipped="$vuetify.breakpoint.lgAndUp"
       app>
       <v-list dense>
@@ -78,12 +78,11 @@ import AppBar from './AppBar.vue'
     },
     computed:{
         showSideBar(){
-            this.$store.getters.g_sideBarOpen;
+          return this.$store.getters.g_sideBarOpen;
         }
     },
     data: () => ({
       dialog: false,
-      drawer: null,
       items: [
         { icon: 'mdi-view-comfy', text: 'Информационная панель', routerLink: '/'},
         {
